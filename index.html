@@ -6,14 +6,23 @@
     <title>Trustspective | Independent AI Governance & Ethics Advisory</title>
     <style>
         :root {
-            /* EMIR-inspired Executive Palette */
-            --bg-color: #030303; 
-            --surface-color: #0f0f0f;
-            --border-color: #2a2a2a;
-            --text-main: #ffffff;
-            --text-muted: #a0a0a0;
-            --accent: #d4af37; /* Sophisticated Gold/Bronze Accent */
-            --accent-hover: #b8972e;
+            /* Premium EMIR-inspired Gold */
+            --accent: #C49A45; 
+            --accent-hover: #A67C33;
+            
+            /* Dark Theme Variables */
+            --dark-bg: #000000;
+            --dark-surface: #0a0a0a;
+            --dark-border: #222222;
+            --dark-text: #ffffff;
+            --dark-muted: #a0a0a0;
+
+            /* Light Theme Variables */
+            --light-bg: #ffffff;
+            --light-surface: #f9f9f9;
+            --light-border: #d0d0d0;
+            --light-text: #000000;
+            --light-muted: #555555;
         }
 
         * {
@@ -24,83 +33,80 @@
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 1.5rem;
+            padding: 0 2rem;
         }
 
-        /* Navigation */
+        /* Alternating Backgrounds */
+        .section-dark {
+            background-color: var(--dark-bg);
+            color: var(--dark-text);
+        }
+        
+        .section-light {
+            background-color: var(--light-bg);
+            color: var(--light-text);
+        }
+
+        /* Navigation (Dark) */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 0;
-            border-bottom: 1px solid var(--border-color);
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--dark-border);
         }
 
         .logo {
-            font-size: 1.25rem;
-            font-weight: 600;
-            letter-spacing: -0.5px;
-            color: var(--text-main);
+            font-size: 1.4rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: var(--dark-text);
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: var(--accent);
         }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 2.5rem;
             align-items: center;
         }
 
         .nav-links a {
-            color: var(--text-muted);
+            color: var(--dark-muted);
             text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.2s;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
         }
 
         .nav-links a:hover {
             color: var(--accent);
         }
 
-        /* Hero Section */
-        header {
-            padding: 5rem 0 4rem;
-        }
-
-        h1 {
-            font-size: 2.75rem;
-            font-weight: 500;
-            letter-spacing: -1px;
-            line-height: 1.2;
-            max-width: 800px;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-subtitle {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin-bottom: 2.5rem;
-        }
-
         /* Buttons */
         .btn {
             display: inline-block;
             background-color: var(--accent);
-            color: #000000;
-            padding: 0.75rem 1.5rem;
-            border-radius: 2px; /* Sharper edges for a corporate look */
+            color: #ffffff;
+            padding: 0.85rem 2rem;
+            border-radius: 0; /* Square edges for premium feel */
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: background-color 0.2s;
+            font-weight: 500;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s;
             border: none;
             cursor: pointer;
         }
@@ -117,25 +123,74 @@
 
         .btn-outline:hover {
             background-color: var(--accent);
-            color: #000000;
+            color: #ffffff;
         }
 
-        /* Sections */
+        /* Hero Section (Dark) */
+        header {
+            padding: 8rem 0 6rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 400;
+            letter-spacing: -1px;
+            line-height: 1.15;
+            max-width: 900px;
+            margin-bottom: 2rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--dark-muted);
+            max-width: 700px;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        /* General Sections */
         section {
-            padding: 4rem 0;
-            border-top: 1px solid var(--border-color);
+            padding: 6rem 0;
         }
 
         .section-header {
             font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             color: var(--accent);
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .section-header::before {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 1px;
+            background-color: var(--accent);
         }
 
-        /* Services Grid */
+        /* About Section (Light) */
+        .about-text h2 {
+            font-size: 2.25rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            color: var(--light-text);
+            line-height: 1.3;
+        }
+        
+        .about-text p {
+            font-size: 1.15rem;
+            color: var(--light-muted);
+            max-width: 900px;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* Services Grid (Dark) */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -143,211 +198,220 @@
         }
 
         .service-card {
-            background-color: var(--surface-color);
-            padding: 2.5rem 2rem;
-            border: 1px solid var(--border-color);
-            border-top: 3px solid var(--accent); /* Premium top-border accent */
-            transition: transform 0.2s, border-color 0.2s;
+            background-color: var(--dark-surface);
+            padding: 3rem 2.5rem;
+            border: 1px solid var(--dark-border);
+            border-top: 2px solid var(--accent);
+            transition: transform 0.3s, background-color 0.3s;
         }
         
         .service-card:hover {
-            border-color: #444;
-            transform: translateY(-2px);
+            background-color: #111111;
+            transform: translateY(-5px);
         }
 
         .service-card h3 {
-            font-size: 1.25rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-            color: var(--text-main);
+            font-size: 1.35rem;
+            font-weight: 400;
+            margin-bottom: 1.25rem;
+            color: var(--dark-text);
         }
 
         .service-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
+            color: var(--dark-muted);
+            font-size: 1rem;
+            line-height: 1.6;
+            font-weight: 300;
         }
 
-        /* About Section */
-        .about-box {
-            background-color: var(--surface-color);
-            border: 1px solid var(--border-color);
-            padding: 3rem;
-            position: relative;
-        }
-        
-        /* Subtle design element for the about box */
-        .about-box::before {
-            content: '';
-            position: absolute;
-            left: -1px;
-            top: 20%;
-            bottom: 20%;
-            width: 3px;
-            background-color: var(--accent);
-        }
-
-        .about-box h3 {
-            margin-bottom: 1.25rem;
-            font-size: 1.5rem;
-            font-weight: 500;
-        }
-
-        .about-box p {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            max-width: 800px;
-            line-height: 1.7;
-        }
-
-        /* Contact Section */
+        /* Contact Section (Light) */
         .contact-layout {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 5rem;
         }
 
         .contact-text h2 {
-            font-size: 2rem;
-            font-weight: 500;
+            font-size: 2.25rem;
+            font-weight: 400;
             margin-bottom: 1.5rem;
-            line-height: 1.2;
+            line-height: 1.3;
+            color: var(--light-text);
         }
 
         form {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 1.5rem;
         }
 
+        /* Premium Form Styling */
         input, textarea {
-            background-color: var(--surface-color);
-            border: 1px solid var(--border-color);
-            color: var(--text-main);
-            padding: 1rem;
-            font-size: 0.95rem;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid var(--light-border);
+            color: var(--light-text);
+            padding: 1rem 0;
+            font-size: 1rem;
             width: 100%;
-            border-radius: 2px;
+            border-radius: 0;
+            transition: border-color 0.3s;
         }
 
         input:focus, textarea:focus {
             outline: none;
-            border-color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+        
+        input::placeholder, textarea::placeholder {
+            color: var(--light-muted);
+            font-weight: 300;
         }
 
         textarea {
             resize: vertical;
-            min-height: 120px;
+            min-height: 100px;
         }
 
         footer {
-            padding: 3rem 0;
-            border-top: 1px solid var(--border-color);
+            padding: 4rem 0;
             text-align: center;
-            color: var(--text-muted);
+            color: var(--dark-muted);
             font-size: 0.85rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            border-top: 1px solid var(--dark-border);
         }
 
         @media (max-width: 768px) {
             .contact-layout {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 3rem;
             }
             .services-grid {
                 grid-template-columns: 1fr;
             }
             h1 {
-                font-size: 2.25rem;
+                font-size: 2.5rem;
             }
             .nav-links {
                 display: none;
             }
-            .about-box {
-                padding: 2rem;
+            section {
+                padding: 4rem 0;
+            }
+            header {
+                padding: 5rem 0 4rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <nav>
-            <div class="logo">Trustspective</div>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#services">Practice Areas</a>
-                <!-- Replace href with your Google Booking Link -->
-                <a href="YOUR_GOOGLE_CALENDAR_LINK_HERE" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem;">Book Call</a>
-            </div>
-        </nav>
-
-        <header>
-            <h1>Operationalizing AI safety, governance, and ethics for enterprise environments.</h1>
-            <p class="hero-subtitle">We bridge the gap between technical AI deployment and regulatory compliance, enabling organizations to innovate without compromising trust.</p>
-            <!-- Replace href with your Google Booking Link -->
-            <a href="YOUR_GOOGLE_CALENDAR_LINK_HERE" target="_blank" class="btn">Book a Consultation</a>
-        </header>
-
-        <section id="about">
-            <div class="section-header">About the Practice</div>
-            <div class="about-box">
-                <h3>A Boutique Advisory Firm</h3>
-                <p>Trustspective is a boutique advisory practice. As a Principal Consultant-led boutique, we bring senior-level expertise directly to every engagement — no juniors, no handoffs. Our practice is built on the intersection of policy rigour, technical depth, and healthcare sector knowledge.</p>
-            </div>
-        </section>
-
-        <section id="services">
-            <div class="section-header">Practice Areas</div>
-            <div class="services-grid">
-                
-                <div class="service-card">
-                    <h3>AI Governance</h3>
-                    <p>AI policy & governance structure, AI system inventory mapping & shadow AI discovery, risk assessments & classification, AI system-level auditing & bias testing.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Legal AI Innovation</h3>
-                    <p>Value-focused use-case assessment, pilot projects & user acceptance testing, prompt training & library development, and AI output verification training.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>AI Ethics</h3>
-                    <p>Ethical assessment of AI systems unique to each use-case using IEEE CertifAIEd standards, and Ethics by Design frameworks.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Due Diligence</h3>
-                    <p>AI vendor contract review and independent assessment of third-party AI claims.</p>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="section-header">Contact</div>
-            <div class="contact-layout">
-                <div class="contact-text">
-                    <h2>Let's discuss how to safely deploy and govern AI in your organization.</h2>
-                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Schedule a consultation via Google Meet, or send a direct inquiry.</p>
-                    
+    <!-- HERO SECTION (DARK) -->
+    <div class="section-dark">
+        <div class="container">
+            <nav>
+                <div class="logo">Trust<span>spective</span></div>
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#services">Practice Areas</a>
                     <!-- Replace href with your Google Booking Link -->
-                    <a href="YOUR_GOOGLE_CALENDAR_LINK_HERE" target="_blank" class="btn btn-outline">Schedule a Video Call</a>
+                    <a href="YOUR_GOOGLE_CALENDAR_LINK_HERE" target="_blank" class="btn btn-outline">Book Call</a>
                 </div>
+            </nav>
 
-                <div class="contact-form">
-                    <!-- Replace YOUR_FORMSPREE_ID with the unique code from Formspree.io -->
-                    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-                        <input type="text" name="name" placeholder="Name" required>
-                        <input type="email" name="email" placeholder="Corporate Email" required>
-                        <textarea name="message" placeholder="How can we assist you?" required></textarea>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
+            <header>
+                <h1>Operationalizing AI safety, governance, and ethics for enterprise environments.</h1>
+                <p class="hero-subtitle">We bridge the gap between technical AI deployment and regulatory compliance, enabling organizations to innovate without compromising trust.</p>
+                <!-- Replace href with your Google Booking Link -->
+                <a href="YOUR_GOOGLE_CALENDAR_LINK_HERE" target="_blank" class="btn">Book a Consultation</a>
+            </header>
+        </div>
+    </div>
+
+    <!-- ABOUT SECTION (LIGHT) -->
+    <div class="section-light" id="about">
+        <div class="container">
+            <section>
+                <div class="section-header">About the Practice</div>
+                <div class="about-text">
+                    <h2>A Boutique Advisory Firm</h2>
+                    <p>Trustspective is an independent advisory practice. As a Principal Consultant-led boutique, we bring senior-level expertise directly to every engagement — no juniors, no handoffs. Our practice is built on the intersection of policy rigour, technical depth, and healthcare sector knowledge.</p>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
+    </div>
 
-        <footer>
-            <p>&copy; 2026 Trustspective. All rights reserved. Toronto, Ontario, Canada.</p>
-        </footer>
+    <!-- SERVICES SECTION (DARK) -->
+    <div class="section-dark" id="services">
+        <div class="container">
+            <section>
+                <div class="section-header">Practice Areas</div>
+                <div class="services-grid">
+                    
+                    <div class="service-card">
+                        <h3>AI Governance</h3>
+                        <p>AI policy & governance structure, AI system inventory mapping & shadow AI discovery, risk assessments & classification, AI system-level auditing & bias testing.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Legal AI Innovation</h3>
+                        <p>Value-focused use-case assessment, pilot projects & user acceptance testing, prompt training & library development, and AI output verification training.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>AI Ethics</h3>
+                        <p>Ethical assessment of AI systems unique to each use-case using IEEE CertifAIEd standards, and Ethics by Design frameworks.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Due Diligence</h3>
+                        <p>AI vendor contract review and independent assessment of third-party AI claims.</p>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- CONTACT SECTION (LIGHT) -->
+    <div class="section-light" id="contact">
+        <div class="container">
+            <section>
+                <div class="section-header">Contact</div>
+                <div class="contact-layout">
+                    <div class="contact-text">
+                        <h2>Let's discuss how to safely deploy and govern AI in your organization.</h2>
+                        <p style="color: var(--light-muted); margin-bottom: 2rem; font-weight: 300;">Schedule a consultation via Google Meet, or send a direct inquiry.</p>
+                        
+                        <!-- Replace href with your Google Booking Link -->
+                        <a href="YOUR_GOOGLE_CALENDAR_LINK_HERE" target="_blank" class="btn">Schedule a Video Call</a>
+                    </div>
+
+                    <div class="contact-form">
+                        <!-- Replace YOUR_FORMSPREE_ID with the unique code from Formspree.io -->
+                        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+                            <input type="text" name="name" placeholder="Full Name" required>
+                            <input type="email" name="email" placeholder="Corporate Email" required>
+                            <textarea name="message" placeholder="How can we assist you?" required></textarea>
+                            <div>
+                                <button type="submit" class="btn btn-outline" style="margin-top: 1rem;">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- FOOTER (DARK) -->
+    <div class="section-dark">
+        <div class="container">
+            <footer>
+                <p>&copy; 2026 Trustspective. All rights reserved. Toronto, Ontario, Canada.</p>
+            </footer>
+        </div>
     </div>
 
 </body>
