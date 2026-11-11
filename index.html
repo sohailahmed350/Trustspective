@@ -113,17 +113,6 @@
             background-color: var(--accent-hover);
         }
 
-        .btn-outline {
-            background-color: transparent;
-            color: var(--accent);
-            border: 1px solid var(--accent);
-        }
-
-        .btn-outline:hover {
-            background-color: var(--accent);
-            color: #ffffff;
-        }
-
         /* Hero Section (Dark) */
         header {
             padding: 8rem 0 6rem;
@@ -249,56 +238,7 @@
             font-weight: 600;
         }
 
-        /* Leadership Section (Light) */
-        .leadership-layout {
-            display: grid;
-            grid-template-columns: 1fr 2.5fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .bio-placeholder {
-            background-color: var(--light-border);
-            aspect-ratio: 3/4;
-            width: 100%;
-            border-radius: 2px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--light-muted);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-align: center;
-            padding: 1rem;
-        }
-
-        .bio-text h3 {
-            font-size: 2rem;
-            font-weight: 400;
-            margin-bottom: 0.5rem;
-            color: var(--light-text);
-        }
-
-        .bio-text h4 {
-            color: var(--accent);
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.85rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .bio-text p {
-            font-size: 1.15rem;
-            color: var(--light-muted);
-            line-height: 1.8;
-            font-weight: 300;
-            margin-bottom: 1.25rem;
-            max-width: 800px;
-        }
-
-        /* Contact Section (Dark) */
+        /* Contact Section (Light) */
         .contact-layout {
             display: block;
             max-width: 800px;
@@ -309,7 +249,7 @@
             font-weight: 400;
             margin-bottom: 1.5rem;
             line-height: 1.3;
-            color: var(--dark-text);
+            color: var(--light-text);
         }
 
         footer {
@@ -325,14 +265,6 @@
         @media (max-width: 768px) {
             .services-grid {
                 grid-template-columns: 1fr;
-            }
-            .leadership-layout {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            .bio-placeholder {
-                max-width: 300px;
-                margin: 0 auto;
             }
             h1 {
                 font-size: 2.5rem;
@@ -432,31 +364,8 @@
         </div>
     </div>
 
-    <!-- LEADERSHIP SECTION (LIGHT) -->
-    <div class="section-light" id="leadership">
-        <div class="container">
-            <section>
-                <div class="section-header">Leadership</div>
-                <div class="leadership-layout">
-                    
-                    <!-- Replace this div with an actual <img> tag when you have a photo -->
-                    <div class="bio-placeholder">
-                        [ Professional Headshot ]
-                    </div>
-                    
-                    <div class="bio-text">
-                        <h3>Sohail Ahmed</h3>
-                        <h4>Principal Consultant</h4>
-                        <p>With a foundation in LegalTech and Legal Operations, Sohail brings a rigorous, structured approach to enterprise AI governance. He specializes in translating complex regulatory and ethical frameworks into actionable, secure technical strategies that organizations can seamlessly adopt.</p>
-                        <p>His operational background ensures that governance is never just theoretical—it is designed to be executed efficiently in real-world corporate environments. Sohail holds global credentials as an <strong>IAPP Certified AI Governance Professional (AIGP)</strong>, an <strong>IEEE CertifAIEd Assessor</strong>, and a <strong>Certified Project Management Professional (PMP)</strong>.</p>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
-
-    <!-- CONTACT SECTION (DARK) -->
-    <div class="section-dark" id="contact">
+    <!-- CONTACT SECTION (LIGHT) -->
+    <div class="section-light" id="contact">
         <div class="container">
             <section>
                 <div class="section-header">Contact</div>
@@ -464,7 +373,7 @@
                     <div class="contact-text">
                         <h2>Let's discuss how to safely deploy and govern AI in your organization.</h2>
                         
-                        <p style="margin-bottom: 2.5rem; font-size: 1.15rem; color: var(--dark-muted); font-weight: 300;"><strong>Email:</strong> <a href="mailto:sohail@trustspective.com" style="color: var(--accent); text-decoration: none; font-weight: 500;">sohail@trustspective.com</a></p>
+                        <p style="margin-bottom: 2.5rem; font-size: 1.15rem; color: var(--light-muted); font-weight: 300;"><strong>Email:</strong> <a href="mailto:sohail@trustspective.com" style="color: var(--accent); text-decoration: none; font-weight: 500;">sohail@trustspective.com</a></p>
                         
                         <a href="https://calendar.app.google/vXLR1aMmvYZhSL146" target="_blank" class="btn">Schedule a Consultation</a>
                     </div>
