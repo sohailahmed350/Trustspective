@@ -80,7 +80,7 @@
         }
 
         .nav-links a {
-            color: var(--dark-muted);
+            color: var(--accent);
             text-decoration: none;
             font-size: 0.85rem;
             text-transform: uppercase;
@@ -89,7 +89,7 @@
         }
 
         .nav-links a:hover {
-            color: var(--accent);
+            color: var(--dark-text);
         }
 
         /* Buttons */
@@ -183,7 +183,7 @@
         .about-text p {
             font-size: 1.15rem;
             color: var(--light-muted);
-            max-width: 900px;
+            max-width: 950px;
             line-height: 1.8;
             font-weight: 300;
         }
@@ -243,9 +243,8 @@
 
         /* Contact Section (Light) */
         .contact-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
+            display: block;
+            max-width: 800px;
         }
 
         .contact-text h2 {
@@ -254,40 +253,6 @@
             margin-bottom: 1.5rem;
             line-height: 1.3;
             color: var(--light-text);
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        /* Premium Form Styling */
-        input, textarea {
-            background-color: transparent;
-            border: none;
-            border-bottom: 1px solid var(--light-border);
-            color: var(--light-text);
-            padding: 1rem 0;
-            font-size: 1rem;
-            width: 100%;
-            border-radius: 0;
-            transition: border-color 0.3s;
-        }
-
-        input:focus, textarea:focus {
-            outline: none;
-            border-bottom-color: var(--accent);
-        }
-        
-        input::placeholder, textarea::placeholder {
-            color: var(--light-muted);
-            font-weight: 300;
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 100px;
         }
 
         footer {
@@ -301,10 +266,6 @@
         }
 
         @media (max-width: 768px) {
-            .contact-layout {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
             .services-grid {
                 grid-template-columns: 1fr;
             }
@@ -338,8 +299,8 @@
 
             <header>
                 <h1>Architecting safe, ethical, and governed enterprise AI.</h1>
-                <p class="hero-subtitle">We bridge the gap between technical AI deployment and regulatory compliance, enabling organizations to innovate without compromising trust.</p>
-                <a href="https://calendar.app.google/vXLR1aMmvYZhSL146" target="_blank" class="btn">Start a Conversation</a>
+                <p class="hero-subtitle">We bridge the gap between technical AI deployment and regulatory compliance, enabling organizations to innovate without compromising client trust.</p>
+                <a href="https://calendar.app.google/vXLR1aMmvYZhSL146" target="_blank" class="btn">Schedule a Consultation</a>
             </header>
         </div>
     </div>
@@ -351,7 +312,8 @@
                 <div class="section-header">About Trustspective</div>
                 <div class="about-text">
                     <h2>A digital trust perspective</h2>
-                    <p>Trustspective is an independent advisory practice. As a boutique firm, we bring senior-level expertise directly to every engagement — no juniors, no handoffs. Our practice combines technical depth with industry-leading frameworks, led by a Principal Consultant who is an IAPP Certified Artificial Intelligence Governance Professional (AIGP) and an IEEE CertifAIEd Assessor.</p>
+                    <p style="margin-bottom: 1.5rem;">Trustspective was established to bridge a critical gap in the enterprise AI market. Traditional management consultancies often lack deep regulatory and data sensitivity expertise. Law firms provide rigorous risk analysis but can miss the practical realities of technical implementation. Meanwhile, IT vendors are fundamentally driven to push their own proprietary software solutions.</p>
+                    <p>We operate exclusively at the intersection of these domains to provide objective, vendor-neutral guidance. As a boutique firm, we bring senior-level expertise directly to every engagement — no handoffs, no bureaucratic delays, and no getting lost in administrative layers. Our practice is anchored by industry-leading frameworks, led by a Principal Consultant who is an IAPP Certified Artificial Intelligence Governance Professional (AIGP) and an IEEE CertifAIEd Assessor.</p>
                 </div>
             </section>
         </div>
@@ -377,7 +339,7 @@
                     <div class="service-card">
                         <h3>Legal AI Innovation</h3>
                         <ul class="service-list">
-                            <li>Value-Focused Use-Case Assessment</li>
+                            <li>Value-Focused Legal AI Use-Case Assessment</li>
                             <li>Pilot Projects & User Acceptance Testing</li>
                             <li>Prompt Training & Library Development</li>
                             <li>AI Output Verification Training</li>
@@ -413,21 +375,11 @@
                 <div class="contact-layout">
                     <div class="contact-text">
                         <h2>Let's discuss how to safely deploy and govern AI in your organization.</h2>
-                        <p style="color: var(--light-muted); margin-bottom: 2rem; font-weight: 300;">Schedule a consultation via Google Meet, or send a direct inquiry.</p>
+                        <p style="color: var(--light-muted); margin-bottom: 2rem; font-weight: 300;">Schedule a consultation via Google Meet.</p>
                         
                         <p style="margin-bottom: 2.5rem;"><strong>Email:</strong> <a href="mailto:sohail@trustspective.com" style="color: var(--accent); text-decoration: none; font-weight: 500;">sohail@trustspective.com</a></p>
-                    </div>
-
-                    <div class="contact-form">
-                        <!-- Replace YOUR_FORMSPREE_ID with the unique code from Formspree.io -->
-                        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-                            <input type="text" name="name" placeholder="Name" required>
-                            <input type="email" name="email" placeholder="Work Email" required>
-                            <textarea name="message" placeholder="How can we assist you?" required></textarea>
-                            <div>
-                                <button type="submit" class="btn" style="margin-top: 1rem;">Start a Conversation</button>
-                            </div>
-                        </form>
+                        
+                        <a href="https://calendar.app.google/vXLR1aMmvYZhSL146" target="_blank" class="btn">Schedule a Consultation</a>
                     </div>
                 </div>
             </section>
