@@ -22,7 +22,7 @@
             /* Light Theme Variables */
             --light-bg: #ffffff;
             --light-surface: #f9f9f9;
-            --light-border: #d0d0d0;
+            --light-border: #e0e0e0;
             --light-text: #000000;
             --light-muted: #555555;
         }
@@ -139,7 +139,7 @@
         }
 
         h1 {
-            font-size: 3.2rem; /* Reduced to keep it to max two lines */
+            font-size: 3.2rem;
             font-weight: 400;
             letter-spacing: -1px;
             line-height: 1.15;
@@ -241,7 +241,6 @@
             position: relative;
         }
 
-        /* Adds the premium gold dash before each list item */
         .service-list li::before {
             content: "—";
             position: absolute;
@@ -250,7 +249,56 @@
             font-weight: 600;
         }
 
-        /* Contact Section (Light) */
+        /* Leadership Section (Light) */
+        .leadership-layout {
+            display: grid;
+            grid-template-columns: 1fr 2.5fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .bio-placeholder {
+            background-color: var(--light-border);
+            aspect-ratio: 3/4;
+            width: 100%;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--light-muted);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .bio-text h3 {
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            color: var(--light-text);
+        }
+
+        .bio-text h4 {
+            color: var(--accent);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .bio-text p {
+            font-size: 1.15rem;
+            color: var(--light-muted);
+            line-height: 1.8;
+            font-weight: 300;
+            margin-bottom: 1.25rem;
+            max-width: 800px;
+        }
+
+        /* Contact Section (Dark) */
         .contact-layout {
             display: block;
             max-width: 800px;
@@ -261,7 +309,7 @@
             font-weight: 400;
             margin-bottom: 1.5rem;
             line-height: 1.3;
-            color: var(--light-text);
+            color: var(--dark-text);
         }
 
         footer {
@@ -277,6 +325,14 @@
         @media (max-width: 768px) {
             .services-grid {
                 grid-template-columns: 1fr;
+            }
+            .leadership-layout {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .bio-placeholder {
+                max-width: 300px;
+                margin: 0 auto;
             }
             h1 {
                 font-size: 2.5rem;
@@ -309,7 +365,7 @@
             <header>
                 <div class="hero-eyebrow">A Digital Trust Perspective</div>
                 <h1>Strategic AI governance that embeds ethics and accelerates innovation.</h1>
-                <p class="hero-subtitle">We integrate technical oversight, ethical design, and regulatory readiness, enabling organizations to innovate without compromising client trust.</p>
+                <p class="hero-subtitle">We integrate technical oversight, ethical design, and regulatory readiness, enabling organizations to innovate while maintaining client trust and brand integrity.</p>
                 <a href="https://calendar.app.google/vXLR1aMmvYZhSL146" target="_blank" class="btn">Schedule a Consultation</a>
             </header>
         </div>
@@ -321,8 +377,8 @@
             <section>
                 <div class="section-header">About Trustspective</div>
                 <div class="about-text">
-                    <h2>The Trustspective Approach</h2>
-                    <p>Trustspective bridges the critical gap left between law firms, traditional consultancies, and technology vendors to deliver holistic and vendor-neutral AI advice. As a boutique firm, we bring senior-level expertise directly to every engagement — no handoffs, no bureaucratic delays, and no getting lost in administrative layers. Our practice is anchored by industry-leading frameworks, led by a Principal Consultant who is a PMI Certified Project Management Professional (PMP), an IAPP Certified Artificial Intelligence Governance Professional (AIGP), and an IEEE CertifAIEd Assessor.</p>
+                    <h2>The Trustspective Way</h2>
+                    <p>Trustspective bridges the critical gap left between law firms, traditional consultancies, and technology vendors to deliver holistic and vendor-neutral AI advice. As a boutique firm, we bring senior-level expertise directly to every engagement — no handoffs, no bureaucratic delays, and no getting lost in administrative layers. Our practice is anchored by industry-leading frameworks, led by a Principal Consultant who is an IAPP Certified Artificial Intelligence Governance Professional (AIGP), an IEEE CertifAIEd Assessor, and a PMI Certified Project Management Professional (PMP).</p>
                 </div>
             </section>
         </div>
@@ -376,8 +432,31 @@
         </div>
     </div>
 
-    <!-- CONTACT SECTION (LIGHT) -->
-    <div class="section-light" id="contact">
+    <!-- LEADERSHIP SECTION (LIGHT) -->
+    <div class="section-light" id="leadership">
+        <div class="container">
+            <section>
+                <div class="section-header">Leadership</div>
+                <div class="leadership-layout">
+                    
+                    <!-- Replace this div with an actual <img> tag when you have a photo -->
+                    <div class="bio-placeholder">
+                        [ Professional Headshot ]
+                    </div>
+                    
+                    <div class="bio-text">
+                        <h3>Sohail Ahmed</h3>
+                        <h4>Principal Consultant</h4>
+                        <p>With a foundation in LegalTech and Legal Operations, Sohail brings a rigorous, structured approach to enterprise AI governance. He specializes in translating complex regulatory and ethical frameworks into actionable, secure technical strategies that organizations can seamlessly adopt.</p>
+                        <p>His operational background ensures that governance is never just theoretical—it is designed to be executed efficiently in real-world corporate environments. Sohail holds global credentials as an <strong>IAPP Certified AI Governance Professional (AIGP)</strong>, an <strong>IEEE CertifAIEd Assessor</strong>, and a <strong>Certified Project Management Professional (PMP)</strong>.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- CONTACT SECTION (DARK) -->
+    <div class="section-dark" id="contact">
         <div class="container">
             <section>
                 <div class="section-header">Contact</div>
@@ -385,7 +464,7 @@
                     <div class="contact-text">
                         <h2>Let's discuss how to safely deploy and govern AI in your organization.</h2>
                         
-                        <p style="margin-bottom: 2.5rem; font-size: 1.15rem; color: var(--light-muted); font-weight: 300;"><strong>Email:</strong> <a href="mailto:sohail@trustspective.com" style="color: var(--accent); text-decoration: none; font-weight: 500;">sohail@trustspective.com</a></p>
+                        <p style="margin-bottom: 2.5rem; font-size: 1.15rem; color: var(--dark-muted); font-weight: 300;"><strong>Email:</strong> <a href="mailto:sohail@trustspective.com" style="color: var(--accent); text-decoration: none; font-weight: 500;">sohail@trustspective.com</a></p>
                         
                         <a href="https://calendar.app.google/vXLR1aMmvYZhSL146" target="_blank" class="btn">Schedule a Consultation</a>
                     </div>
