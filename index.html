@@ -6,12 +6,14 @@
     <title>Trustspective | Independent AI Governance & Ethics Advisory</title>
     <style>
         :root {
-            --bg-color: #050505;
-            --surface-color: #121212;
+            /* EMIR-inspired Executive Palette */
+            --bg-color: #030303; 
+            --surface-color: #0f0f0f;
             --border-color: #2a2a2a;
-            --text-main: #f5f5f5;
+            --text-main: #ffffff;
             --text-muted: #a0a0a0;
-            --accent: #ffffff;
+            --accent: #d4af37; /* Sophisticated Gold/Bronze Accent */
+            --accent-hover: #b8972e;
         }
 
         * {
@@ -24,11 +26,10 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
-            line-height: 1.5;
+            line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Tighter Layout Container */
         .container {
             max-width: 1100px;
             margin: 0 auto;
@@ -48,6 +49,7 @@
             font-size: 1.25rem;
             font-weight: 600;
             letter-spacing: -0.5px;
+            color: var(--text-main);
         }
 
         .nav-links {
@@ -67,7 +69,7 @@
             color: var(--accent);
         }
 
-        /* Compact Hero Section */
+        /* Hero Section */
         header {
             padding: 5rem 0 4rem;
         }
@@ -92,32 +94,33 @@
         .btn {
             display: inline-block;
             background-color: var(--accent);
-            color: var(--bg-color);
+            color: #000000;
             padding: 0.75rem 1.5rem;
-            border-radius: 4px;
+            border-radius: 2px; /* Sharper edges for a corporate look */
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 0.95rem;
-            transition: opacity 0.2s;
+            transition: background-color 0.2s;
             border: none;
             cursor: pointer;
         }
 
         .btn:hover {
-            opacity: 0.9;
+            background-color: var(--accent-hover);
         }
 
         .btn-outline {
             background-color: transparent;
             color: var(--accent);
-            border: 1px solid var(--border-color);
+            border: 1px solid var(--accent);
         }
 
         .btn-outline:hover {
-            border-color: var(--accent);
+            background-color: var(--accent);
+            color: #000000;
         }
 
-        /* Grid Layout for Reduced Scrolling */
+        /* Sections */
         section {
             padding: 4rem 0;
             border-top: 1px solid var(--border-color);
@@ -127,8 +130,9 @@
             font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: var(--text-muted);
+            color: var(--accent);
             margin-bottom: 2rem;
+            font-weight: 600;
         }
 
         /* Services Grid */
@@ -140,15 +144,22 @@
 
         .service-card {
             background-color: var(--surface-color);
-            padding: 2rem;
+            padding: 2.5rem 2rem;
             border: 1px solid var(--border-color);
-            border-radius: 6px;
+            border-top: 3px solid var(--accent); /* Premium top-border accent */
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        
+        .service-card:hover {
+            border-color: #444;
+            transform: translateY(-2px);
         }
 
         .service-card h3 {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             font-weight: 500;
             margin-bottom: 1rem;
+            color: var(--text-main);
         }
 
         .service-card p {
@@ -156,24 +167,36 @@
             font-size: 0.95rem;
         }
 
-        /* Credentials Section */
-        .credentials-box {
+        /* About Section */
+        .about-box {
             background-color: var(--surface-color);
             border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 2.5rem;
+            padding: 3rem;
+            position: relative;
         }
         
-        .credentials-box h3 {
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
+        /* Subtle design element for the about box */
+        .about-box::before {
+            content: '';
+            position: absolute;
+            left: -1px;
+            top: 20%;
+            bottom: 20%;
+            width: 3px;
+            background-color: var(--accent);
+        }
+
+        .about-box h3 {
+            margin-bottom: 1.25rem;
+            font-size: 1.5rem;
             font-weight: 500;
         }
 
-        .credentials-box p {
+        .about-box p {
             color: var(--text-muted);
-            font-size: 0.95rem;
-            max-width: 700px;
+            font-size: 1.05rem;
+            max-width: 800px;
+            line-height: 1.7;
         }
 
         /* Contact Section */
@@ -200,10 +223,10 @@
             background-color: var(--surface-color);
             border: 1px solid var(--border-color);
             color: var(--text-main);
-            padding: 0.85rem;
-            border-radius: 4px;
+            padding: 1rem;
             font-size: 0.95rem;
             width: 100%;
+            border-radius: 2px;
         }
 
         input:focus, textarea:focus {
@@ -236,7 +259,10 @@
                 font-size: 2.25rem;
             }
             .nav-links {
-                display: none; /* Simplifies mobile nav */
+                display: none;
+            }
+            .about-box {
+                padding: 2rem;
             }
         }
     </style>
@@ -247,19 +273,27 @@
         <nav>
             <div class="logo">Trustspective</div>
             <div class="nav-links">
+                <a href="#about">About</a>
                 <a href="#services">Practice Areas</a>
-                <a href="#credentials">Leadership Credentials</a>
                 <!-- Replace href with your Google Booking Link -->
                 <a href="YOUR_GOOGLE_CALENDAR_LINK_HERE" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem;">Book Call</a>
             </div>
         </nav>
 
         <header>
-            <h1>Operationalizing AI safety, governance, and ethics for enterprise and legal environments.</h1>
+            <h1>Operationalizing AI safety, governance, and ethics for enterprise environments.</h1>
             <p class="hero-subtitle">We bridge the gap between technical AI deployment and regulatory compliance, enabling organizations to innovate without compromising trust.</p>
             <!-- Replace href with your Google Booking Link -->
             <a href="YOUR_GOOGLE_CALENDAR_LINK_HERE" target="_blank" class="btn">Book a Consultation</a>
         </header>
+
+        <section id="about">
+            <div class="section-header">About the Practice</div>
+            <div class="about-box">
+                <h3>A Boutique Advisory Firm</h3>
+                <p>Trustspective is a boutique advisory practice. As a Principal Consultant-led boutique, we bring senior-level expertise directly to every engagement — no juniors, no handoffs. Our practice is built on the intersection of policy rigour, technical depth, and healthcare sector knowledge.</p>
+            </div>
+        </section>
 
         <section id="services">
             <div class="section-header">Practice Areas</div>
@@ -285,15 +319,6 @@
                     <p>AI vendor contract review and independent assessment of third-party AI claims.</p>
                 </div>
 
-            </div>
-        </section>
-
-        <!-- Credentials Subsection moved out of main flow -->
-        <section id="credentials">
-            <div class="section-header">Leadership</div>
-            <div class="credentials-box">
-                <h3>Certified Expertise</h3>
-                <p>Trustspective is driven by extensive experience in LegalTech and AI integration. Leadership holds the <strong>IAPP Automated AI Governance Professional (AIGP)</strong> certification and is trained as an <strong>IEEE CertifAIEd Assessor</strong>, ensuring that our assessments meet the highest global standards for privacy, ethics, and algorithmic accountability.</p>
             </div>
         </section>
 
